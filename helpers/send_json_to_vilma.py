@@ -10,12 +10,24 @@ def send_json_to_vilma(json_object):
     s.connect((config.vilma_host,config.vilma_port))
 
 
-    str_data = json.dumps(json_object)
+    str_data = json.dumps(json_object).encode()
 
-    s.sendall(str_data.encode())
+    s.sendall(str(len(str_data)).encode())
+
+    ret = s.recv(2048)
+
+    if ret != b"ok":
+        return json.dumps({"error":"true"})
+
+    s.sendall(str_data)
 
 
     ret = s.recv(2048)
+
+    s.sendall(b"ok")
+
+    ret = s.recv(int(ret.decode())+1)
+
 
     return ret.decode()
 
