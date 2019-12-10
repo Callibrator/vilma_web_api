@@ -3,7 +3,7 @@
 This is a simple Stateless API that acts as a parser for VILMA music api. The Logic behind this application is that it is easier to make web requests than dealing with sockets!
 
 <p align="center">
-  <img src="/resources/logo.png">
+  <img src="/Resources/Logo.png">
 </p>
 
 ## Deployment
