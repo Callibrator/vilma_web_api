@@ -2,6 +2,10 @@
 
 This is a simple Stateless API that acts as a parser for VILMA music api. The Logic behind this application is that it is easier to make web requests than dealing with sockets!
 
+<p align="center">
+  <img src="/resources/logo.png">
+</p>
+
 ## Deployment
 You can either deploy the api to an apache or some other kind of web server or just run the web_api.py file (for test purposes only)
 
@@ -26,13 +30,42 @@ You Can edit the config.py file inside config folder to achieve the required cha
 # API Usage
 Nothing Actually Changes from the way you treat vilma project! Everything stays exactly as it is concerning the json objects & parameters
 
-## Request example of json object that needs to be send as a string:
+## Request examples of json object that needs to be send as a string:
+
+### Play Song
+```
+{
+    "command": "play_song",
+    "song_name": "for damaged coda"
+
+}
+```
+
+### Play Song By Location
 
 ```
 {
-    "command": "play",
-    "song_name": "for damaged coda"
+    "command": "play_song",
+    "song_name": "F://music/test.mp3"
 
+}
+```
+
+### Set Volume
+
+```
+{
+    "command": "volume",
+    "value": 75
+
+}
+```
+
+### Get Status
+
+```
+{
+    "command": "status"
 }
 ```
 
@@ -50,6 +83,7 @@ Nothing Actually Changes from the way you treat vilma project! Everything stays 
 - add: adds song the the end of the playlist
 - play_next: adds song to next to the song that it is currently playing
 - get_songs: returns a list with all songs
+- status: Return the current status of the player
 
 ## Response Example. It is a json object that will be send to the device/client as string
 
