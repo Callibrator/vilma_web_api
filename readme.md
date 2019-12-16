@@ -6,6 +6,14 @@ This is a simple Stateless API that acts as a parser for VILMA music api. The Lo
   <img src="/Resources/Logo.png">
 </p>
 
+## Other Softwares
+
+- [Vilma](https://github.com/Callibrator/vilma)
+- [Vilma APP](https://github.com/Callibrator/vilma_app)
+- [Vilma APP (PlayStore)](https://play.google.com/store/apps/details?id=com.callibrator.callibrator.vilma)
+
+
+
 ## Deployment
 You can either deploy the api to an apache or some other kind of web server or just run the web_api.py file (for test purposes only)
 
